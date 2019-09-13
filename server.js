@@ -1,11 +1,11 @@
 const express = require('express')
 
-const ProjectRouter = require('./propjects/project-router.js')
+const ProjectRouter = require('./projects/project-router.js')
 
 const server = express()
 
 server.use(express.json())
 
-server.use('/api/projects', PropjectRputer)
+server.use('/api/projects', ProjectRouter)
 
 module.exports = server
