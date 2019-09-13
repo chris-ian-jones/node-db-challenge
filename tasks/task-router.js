@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     const formattedTasks = tasks.map(task => (
       {
         ...task,
-        completed: task.completed === 0 ? 'false' : 'true'
+        completed: task.completed === 0 ? false : true
       }
     ))
     res.status(200).json(formattedTasks)

@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     const formattedProjects = projects.map(project => (
       {
         ...project,
-        completed: project.completed === 0 ? 'false' : 'true'
+        completed: project.completed === 0 ? false : true
       }
     ))
     res.status(200).json(formattedProjects)
