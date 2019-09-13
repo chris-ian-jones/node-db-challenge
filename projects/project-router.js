@@ -7,7 +7,13 @@ const router = express.Router()
 router.get('/', (req, res) => {
   Projects.getProjects()
   .then(projects => {
-    res.json(projects)
+    const formattedProjects = projects.map(project => (
+      {
+        ...project,
+        completed: project.completed === 0 ? 'false' : 'true'
+      }
+    ))
+    res.json(formattedProjects)
   })
   .catch(err => {
     res.status(500).json({ message: 'Failed to get projects' })
