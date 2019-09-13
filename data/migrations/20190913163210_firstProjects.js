@@ -32,7 +32,7 @@ exports.up = function(knex) {
     tbl.string('description', 4000)
   })
 
-  // 'Intermediary' table for 'Many to Many' relationship between Projects And Resources
+  // 'Intermediary' table for 'Many to Many' relationship between Projects & Resources
   .createTable('projects_resources', tbl => {
 
     // Foreign Keys pointing to primary keys of Projects & Resources
@@ -51,7 +51,7 @@ exports.up = function(knex) {
         .onDelete('CASCADE')
         .onUpdate('CASCADE')
 
-      // 'Composite' primary key consisting of primary keys of Projects & Resources
+      // 'Composite' primary key consisting of names of foreign keys in this table, pointing to primary keys of Projects & Resources
       tbl.primary(['project_id', 'resource_id'])
   })
 }

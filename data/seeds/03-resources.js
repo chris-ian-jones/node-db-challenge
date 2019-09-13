@@ -1,11 +1,11 @@
 exports.seed = function(knex) {
   return knex('resources').insert([
-    { name: 'res name 1', description: 'res des1' },
-    { name: 'res name 2', description: 'res des2' },
-    { name: 'res name 3', description: 'res des3' },
-    { name: 'res name 4', description: 'res des4' },
-    { name: 'res name 5', description: 'res des5' },
-    { name: 'res name 6', description: 'res des6' },
-    { name: 'res name 7', description: 'res des7' }
+    { name: 'resource name A', description: 'resource desc A'},
+    { name: 'resource name B', description: 'resource desc B'},
+    { name: 'resource name C', description: 'resource desc C'},
+    { name: 'resource name D', description: 'resource desc D'},
+    { name: 'resource name E', description: 'resource desc E'},
+    { name: 'resource name F', description: 'resource desc F'},
+    { name: 'resource name G', description: 'resource desc G'}
   ])
 }
